@@ -1,65 +1,92 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #fff;
-  }
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background: linear-gradient(135deg, #f0f8ff 0%, #e3e6f3 100%);
+}
   
   .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
   }
   
   h1, h2, h3 {
-    color: #001f3f; /* Navy Blue */
+    color: #2a2a72;
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
   }
   
   a {
     text-decoration: none;
-    color: #0074D9; /* Blue */
+    color: #0074D9;
+    transition: color 0.2s;
+  }
+  a:hover {
+    color: #ff6a88;
   }
   
   .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #0074D9;
+    padding: 12px 32px;
+    background: linear-gradient(90deg, #2a2a72 0%, #0074D9 100%);
     color: #fff;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    transition: background 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
   }
-  
   .btn:hover {
-    background-color: #0056b3;
+    background: linear-gradient(90deg, #0074D9 0%, #2a2a72 100%);
+    transform: translateY(-2px) scale(1.04);
+  }
+  .btn-primary {
+    background: linear-gradient(90deg, #ff6a88 0%, #2a2a72 100%);
   }
   
   /* Navigation */
-  nav {
-    background-color: #001f3f;
-    padding: 10px 0;
+  .navbar {
+    background: linear-gradient(90deg, #2a2a72 0%, #0074D9 100%);
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
-  
-  nav .logo {
+  .nav-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
     color: #fff;
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(44, 62, 80, 0.12);
   }
-  
-  nav .nav-links {
+  .nav-links {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
+    gap: 2rem;
   }
-  
-  nav .nav-links li {
-    margin-left: 20px;
+  .nav-links li {
+    margin: 0;
   }
-  
-  nav .nav-links a {
+  .nav-links a {
     color: #fff;
-    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background 0.2s;
+  }
+  .nav-links a:hover {
+    background: rgba(255,255,255,0.12);
   }
   
   /* Hero Section */
@@ -82,55 +109,77 @@ body {
   /* About Section */
   .about {
     padding: 80px 0;
+    background: #fff;
+  }
+  .about-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-text {
+    flex: 1 1 350px;
+    min-width: 280px;
+  }
+  .about-img {
+    flex: 1 1 250px;
+    min-width: 200px;
     text-align: center;
   }
-  
-  .about h2 {
-    margin-bottom: 20px;
+  .about-img img {
+    width: 180px;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
   }
-  
-  .about p {
-    font-size: 18px;
-    line-height: 1.6;
+  .about-list {
+    margin-top: 1.5rem;
+    padding-left: 1.2rem;
+    font-size: 1.1rem;
+    color: #2a2a72;
+    list-style: disc inside;
   }
   
   /* Portfolio Section */
   .portfolio {
     padding: 80px 0;
-    background-color: #f0f8ff;
+    background: linear-gradient(120deg, #e3e6f3 0%, #f0f8ff 100%);
     text-align: center;
   }
-  
   .portfolio h2 {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
   }
-  
   .projects {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 2rem;
     justify-content: center;
   }
-  
   .project {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    background: #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.10);
+    width: 320px;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
-  
+  .project:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+  }
   .project img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 16px;
+    margin-bottom: 1rem;
   }
-  
   .project h3 {
-    margin: 15px 0 10px;
+    margin: 1rem 0 0.5rem;
+    font-size: 1.3rem;
+    color: #2a2a72;
   }
-  
   .project p {
-    font-size: 14px;
+    font-size: 1rem;
     color: #666;
   }
   
